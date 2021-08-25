@@ -1,0 +1,62 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+}
+
+.bloc-tabs {
+  display: flex;
+}
+.tabs {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 212px;
+  color: white;
+  background: black;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+/* :hover .tabs{
+    color: black;
+    background: green;
+} */
+
+.active-tabs {
+  background: rgb(1, 104, 1);
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+  /* background: rgb(88, 147, 241); */
+}
+
+/* .content-tabs {
+  flex-grow: 1;
+} */
+.content {
+  /* width: 100%;
+  height: 100%; */
+  display: none;
+}
+
+.active-content {
+  display: block;
+}
